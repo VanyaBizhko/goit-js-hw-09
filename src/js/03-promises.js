@@ -6,7 +6,7 @@ const delay = parseInt(form.elements.delay.value);
 const step = parseInt(form.elements.step.value);
 const amount = parseInt(form.elements.amount.value);
 
-for (let i = 1; i <= amount; i++) {
+for (let i = 1; i <= amount; i+=1) {
 createPromise(i, delay + i * step)
 .then(({ position, delay }) => {
 console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
